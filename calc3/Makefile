@@ -6,7 +6,11 @@ YACC=bison
 # i.e. y.tab.h for compatibility with yacc.
 YFLAGS=-d -b y
 
+all: calc compile
+.PHONY: all
+
 calc: interp.c lex.yy.c calc.c
+compile: compile.c lex.yy.c calc.c
 
 lex.yy.c: calc.l
 	$(LEX) $^
