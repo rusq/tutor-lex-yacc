@@ -6,7 +6,7 @@ YACC=bison
 # i.e. y.tab.h for compatibility with yacc.
 YFLAGS=-d -b y
 
-calc: lex.yy.c calc.c
+calc: interp.c lex.yy.c calc.c
 
 lex.yy.c: calc.l
 	$(LEX) $^
