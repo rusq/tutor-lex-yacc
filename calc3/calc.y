@@ -79,7 +79,7 @@ expr:
     | expr GE expr		{ $$ = opr(GE, 2, $1, $3); }
     | expr LE expr		{ $$ = opr(LE, 2, $1, $3); }
     | expr NE expr		{ $$ = opr(NE, 2, $1, $3); }
-    | expr EQ expr		{ $$ = opr(GE, 2, $1, $3); }
+    | expr EQ expr		{ $$ = opr(EQ, 2, $1, $3); }
     | '(' expr ')'		{ $$ = $2; }
     ;
 

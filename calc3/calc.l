@@ -24,7 +24,7 @@ void yyerror(char*);
 		}
 		
 		/* operators */
-[-+()=/*<>;{}.\n]	return *yytext;
+[-()<>=+*/;{}.]		return *yytext;
 
 ">="			return GE;
 "<="			return LE;
@@ -35,7 +35,7 @@ void yyerror(char*);
 "else"			return ELSE;
 "print"			return PRINT;
 
-[ \t\n]+	; /* skipping whitespace */
+[ \t\n]+	; 			/* skipping whitespace */
 
 .		yyerror("Unknown character");
 
