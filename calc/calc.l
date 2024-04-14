@@ -6,12 +6,20 @@ void yyerror(char*);
 
 %%
 
+		/* variables */
+[a-z]		{
+			yylval = *yytext - 'a';
+			return VARIABLE;
+		}
+
+		/* integers */
 [0-9]+		{
 			yylval = atoi(yytext);
 			return INTEGER;
 		}
-
-[-+\n]		return *yytext;
+		
+		/* operators */
+[-+()=/*\n]	{	return *yytext;		}
 
 [ \t]		; /* skipping whitespace */
 

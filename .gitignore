@@ -1,3 +1,5 @@
 calc/calc
+calc/calc.c
 lex.yy.c
 *.tab.[ch]
+*~

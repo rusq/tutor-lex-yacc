@@ -14,4 +14,4 @@ lex.yy.c: calc.l
 calc.c: calc.y
 
 clean:
-	-rm {calc,y}.tab.[ch] lex.yy.c calc.c *.o
+	-rm {calc,y}.tab.[ch] lex.yy.c calc.c *.o calc
